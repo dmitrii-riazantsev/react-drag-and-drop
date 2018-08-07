@@ -1,0 +1,1 @@
+C:\node-v8.11.3-win-x86\nodevars.bat

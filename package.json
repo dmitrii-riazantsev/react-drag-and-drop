@@ -2,9 +2,11 @@
   "name": "react-drag-and-drop",
   "version": "1.0.0",
   "description": "react-drag-and-drop",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config prod.webpack.config.js",
+    "debug": "webpack --config webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
@@ -15,9 +17,25 @@
     "drag-and-drop"
   ],
   "author": "Dmitrii Riazantsev",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dmitrii-riazantsev/react-drag-and-drop/issues"
   },
-  "homepage": "https://github.com/dmitrii-riazantsev/react-drag-and-drop#readme"
+  "homepage": "https://github.com/dmitrii-riazantsev/react-drag-and-drop#readme",
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-beautiful-dnd": "^8.0.7",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "webpack": "^4.16.5"
+  }
 }
