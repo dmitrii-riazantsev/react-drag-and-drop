@@ -1,0 +1,23 @@
+{
+  "name": "react-drag-and-drop",
+  "version": "1.0.0",
+  "description": "react-drag-and-drop",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrii-riazantsev/react-drag-and-drop.git"
+  },
+  "keywords": [
+    "react",
+    "drag-and-drop"
+  ],
+  "author": "Dmitrii Riazantsev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitrii-riazantsev/react-drag-and-drop/issues"
+  },
+  "homepage": "https://github.com/dmitrii-riazantsev/react-drag-and-drop#readme"
+}
