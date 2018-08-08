@@ -27,6 +27,7 @@
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
+    "npm": "^6.3.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
