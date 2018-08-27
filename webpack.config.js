@@ -1,36 +1,43 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+
 
 module.exports =
 {
     mode: 'development',
     entry: './src/main.js',
-    output: {
+    output: 
+    {
         path: __dirname + '/dist',
         filename: 'application.js'
     },
     devtool: 'source-map',
-    module: {
-        rules: [
+    devServer: 
+    {
+        contentBase: './dist'
+    },
+    module: 
+    {
+        rules: 
+        [
             {
                 test: /\.(js|jsx)$/,
-				include: [
-					path.resolve(__dirname, 'src')	
-				],
+				include: [path.resolve(__dirname, 'src')],
                 exclude: /node_modules/,
-                use: {
+                use: 
+                {
                     loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            'env',
-                            'react'
-                        ]
+                    options: 
+                    {
+                        presets: ['env', 'react']
                     }
                 }
             },
             {
                 test: /\.less$/,
-                use: [
+                use: 
+                [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'less-loader'
@@ -38,8 +45,13 @@ module.exports =
             }
         ]
     },
-    resolve: {
+    resolve: 
+    {
         extensions: [".js", ".json", ".jsx", ".css"]
     },
-    plugins: [new MiniCssExtractPlugin({filename: 'application.css'})]
+    plugins: 
+    [
+        new MiniCssExtractPlugin({ filename: 'application.css' }),
+        new HtmlWebpackPlugin({ template: 'index.html' })
+    ]
 }
