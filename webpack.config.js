@@ -12,7 +12,7 @@ module.exports =
         path: __dirname + '/dist',
         filename: 'application.js'
     },
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     devServer: 
     {
         contentBase: './dist'
